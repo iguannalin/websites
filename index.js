@@ -12,10 +12,7 @@ window.addEventListener("load", () => {
     imageContainer.style.opacity = +(imageContainer.style.opacity) + (delta * 0.05);
   }, 200);
   fetch("https://nec-airtable.netlify.app/.netlify/functions/hello-world")
-        .then((r) => r.json())
-        .then((data) => {
-          console.log(data);
-        })
+        .then((r) => r)
         .catch((err) => {
           console.log(err);
         });
